@@ -1,7 +1,7 @@
-# Introducción a Social Network con politicxsentwitter 🐦📦
+# Introducción a Social Network con politicxsentwitter 🐦
 Charla realizada en RLadies BA sobre Introducción a Social Network en R! 
 
-### Materiales 
+### Materiales 🤓👇
 
 * Slides ([link](https://guadag12.github.io/socialnetwork-rladies-talk/))
 
