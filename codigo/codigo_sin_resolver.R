@@ -25,12 +25,12 @@ library(ggpp)    #sólo se necesita para los gráficos de ggplot del principio, 
 # 2.a. Podemos descargar para un funcionario en particular con la función "get_timeline_data()" 
 # dandole el screen_name de la persona que queremos descargar:
 
-data_vizzotti <- get_timeline_data(screen.name = "carlavizzotti")
+data_vizzotti <- get_timeline_data(screen.name = "____________")
 
 # 2.b. Podemos descargar la cantidad de seguidores / seguidos que tiene un usuario
 # con la función "get_friends_followers()" indicandole el nombre de él / los usuarios :
 
-data_fr_fol <- get_friends_followers(screen.name = c("alferdez", "horaciorlarreta"))
+data_fr_fol <- ________(screen.name = c("alferdez", "horaciorlarreta"))
 
 data_fr_fol %>% 
   ggplot() + 
@@ -56,7 +56,7 @@ data_fr_fol %>%
 # 'national executive','others','province servants', 'senators'". Y le tenemos que aclarar
 # una fecha de inicio y una de finalización
 
-network_diputadxs <- get_network_data(category = "deputies", 
+network_diputadxs <- get_network_data(category = "_______", 
                                       start_date = "2021-06-01", 
                                       end_date = "2021-07-31")
 
@@ -105,38 +105,38 @@ links <- network_diputadxs %>%
 
 # 3.b. Armado de nube con la función "graph_from_data_frame()":
 
-g <- graph_from_data_frame(links, directed=TRUE, vertices=nodos)
+g <- graph_from_data_frame(________, directed=TRUE, vertices=______)
 
 # 3.c. Graficamos la nube con "plot()" e insertamos adentro la nube 
 # formada en el punto anterior:
 
-plot(g)
+plot(______)
 
 # 3.d. Exploremos un poco la data:
 
-class(g) #chequiemos que esta bien el tipo de grafico
+class(______) #chequiemos que esta bien el tipo de grafico con "class()"
 
-summary(g) #vemos alguna información adicional sobre la nube
+________(g) #vemos alguna información adicional sobre la nube con "summary()"
 
-is.directed(g) # le preguntamos si es un grafo dirigido
+is.directed(_____) # le preguntamos si es un grafo dirigido
+
 
 # 3.e. Accedamos a datos de los nodos / edges: 
 
-V(g) # Podemos acceder a data sobre los vertices
+__(g) # Podemos acceder a data sobre los vertices
 
-E(g) #podemos acceder a data sobre las edges
+__(g) #podemos acceder a data sobre las edges
 
-V(g)$name # Podemos pedirle info adicional sobre los diferentes atributos de nuestro gráfico
+V(g)$____ # Podemos pedirle info adicional sobre los diferentes atributos de nuestro gráfico
 
-plot(g, vertex.label = NA, vertex.color = NA) # hacemos un plot sin distinguir color y usuario
+plot(g, vertex.label = ___, vertex.color = ___) # hacemos un plot sin distinguir color y usuario
 
 # 4. Customizacion --------------------------------------------------------
 
 # 4.a. Cambiamos el color de los nodos con el parametro "vertex.color" y
 # le pedimos que NO nos traiga el nombre de los vertices con "vertex.label = NA":
 
-plot(g, vertex.label = NA, vertex.color = "red")
-
+plot(g, vertex.label = NA, vertex.color = "_____")
 
 
 # 4.b.Cambiamos el color de los nodos según la columna "colors" y agreguemosle la leyenda:
@@ -144,29 +144,30 @@ plot(g, vertex.label = NA, vertex.color = "red")
 plot(g, vertex.label = NA)
 legend(x=-1.5, y=-1.1, c("Otrxs",  "Cambiemos", "Frente de Todos", "Libertarios",
                          "Frente de Izquierda","Peronismo"), pch=21,
-       col="#777777", pt.bg=unique(data_usuarios$color), pt.cex=2, cex=.8, bty="n", ncol=1)
+       col="#777777", pt.bg= unique(data_usuarios$color), pt.cex=2, cex=.8, bty="n", ncol=1)
+
 
 # 4.c. Cambiar el tamaño de los nodos con "vertex.size":
 
-plot(g, vertex.label = NA, vertex.size = 5)
+plot(g, vertex.label = NA, ________ = ___)
+
 
 # 4.d. Cambiar el color de las aristas con "edge.color":
 
-plot(g, vertex.label = NA, vertex.size = 5, edge.color = "#ffbc75")
+plot(g, vertex.label = NA, vertex.size = 5, edge.color = "#________")
 
 
 # 4.e. Cambiar el tamaño del nodo según la cantidad de seguidores:
 
-plot(g, vertex.label = NA,  vertex.size = sqrt(V(g)$followers_count)/22, edge.color = "#ffbc75")
+plot(g, vertex.label = NA,  vertex.size = ______________,  edge.color = "#ffbc75")
 
 # 4.f. ¿Podemos graficar quiénes tienen más followers? 
 
 # Es necesario hacer un ifelse() y asignarlo a una variable, luego se puede graficar:
 
-label <- ifelse(V(g)$followers_count > quantile(V(g)$followers_count, 0.95), 
-                yes = V(g)$name, no = NA) 
+label <- ifelse(V(g)$followers_count > ______________, yes = _______, no = NA) 
 
-plot(g, vertex.label = label, 
+plot(g, vertex.label = ______, 
      vertex.size = sqrt(V(g)$followers_count)/28,
      edge.color = "#ffbc75")
 
@@ -181,53 +182,56 @@ label2 <- ifelse(test = V(g)$retweet_count > quantile(V(g)$retweet_count, 0.98),
 par(mfrow=c(1,2), mar=c(0,0,0,0))  
 plot(g, vertex.label = NA, vertex.size = sqrt(V(g)$followers_count)/28, 
      edge.color = "#d1d1d1", 
-     main = "Network basado en Followers")
+     main = "Network basado en ________")
 
 plot(g, vertex.label = NA, vertex.size = sqrt(V(g)$retweet_count)*2, 
      edge.color = "#d1d1d1", 
-     main = "Network basado en RTS")
+     main = "Network basado en _________")
 
 par(mfrow=c(1,1), mar=c(0,0,0,0))  
 
 # 5. Degree (grados de centralidad) ----------------------------------
 
 # 5.a. Calcular el out-degree con la función "degree()" aclarandole el mode "out":
-g.outd <- degree(g, mode = c("out"))
+g.outd <- degree(g, mode = c("______"))
 
 hist(g.outd, breaks = 30)
 
 # 5.b. Calcular el in-degree (grado de entrada):
-g.ind <- degree(g, mode = c("in"))
+
+g.ind <- _______(g, mode = c("____"))
 
 # 5.c. Cambiemos el tamaño de los nodos según el grado de entrada:
-plot(g,  vertex.size = g.ind, vertex.label= NA)
+plot(g,  vertex.size = ______, vertex.label= NA)
 
 # 6. Layouts --------------------------------------------------------------
 
 # 6.a. Utilicemos el "layout_in_circle":
 
 plot(g, vertex.size = g.ind, vertex.label = label2,
-     layout = layout_in_circle(g))
+     layout = ________(g))
 
-# 6.b. Utilicemos el "layout.fruchterman.reingold"
+# 6.b. Utilicemos el "layout.fruchterman.reingold":
+
 plot(g, vertex.size = g.ind, vertex.label = label2, 
-     layout = layout.fruchterman.reingold(g))
+     layout = __________(g))
 
 # 7. Comunidades ----------------------------------------------------------
 
 ## Generamos un nuevo objeto que detecta comunidades para nuestra nube con
-## walktrap.community()
-wc <- walktrap.community(g)
+## walktrap.community():
 
-# Se determina qué miembro corresponde a qué comunidad
-users_wc <- membership(wc)
+wc <- _____________(g)
+
+# Podemos detectar qué miembro corresponde a qué comunidad
+users_wc <- membership(____)
 
 ## Generamos el gráfico
-
-plot(wc, g, vertex.label=NA, layout=layout.fruchterman.reingold(g), 
+plot(____, g, vertex.label=NA, layout=layout.fruchterman.reingold(g), 
      vertex.size=log(g.ind+1)*2, vertex.label.color="Black",
      vertex.color=V(g)$color, vertex.frame.color=V(g)$color, 
      edge.arrow.size=.2)
+
 
 # 8. Agreguemos Interactividad! -------------------------------------------
 
@@ -245,7 +249,7 @@ nodes <- nodos %>% rename(label = screen_name)
 # "visPhysics()" donde le pedimos que la distancia de los nodos este dada por la cantidad de retweets que comparten
 # "visInteraction()" donde le pedimos que sea interactivo
 
-visNetwork(nodes, links, main = paste0("Interacción en Twitter de usuarios de la HCDN")) %>%
+visNetwork(____, ____, main = paste0("Interacción en Twitter de usuarios de la HCDN")) %>%
   visIgraphLayout() %>%
   visNodes(
     shape = "dot",
