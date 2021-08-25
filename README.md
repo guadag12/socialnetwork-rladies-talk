@@ -5,8 +5,8 @@ Charla realizada en RLadies BA sobre Introducción a Social Network Analysis en 
 
 * Slides ([link](https://guadag12.github.io/socialnetwork-rladies-talk/))
 
-* Materiales ([link](https://github.com/guadag12/socialnetwork-rladies-talk/tree/main/codigo))
-
 * Slides repositorio ([link](https://github.com/guadag12/socialnetwork-rladies-talk))
+ 
+* Código del workshop ([link](https://github.com/guadag12/socialnetwork-rladies-talk/tree/main/codigo))
 
-* Proyecto Rstudio Cloud ([link](https://rstudio.cloud/project/2794017))
+* Proyecto en Rstudio Cloud ([link](https://rstudio.cloud/project/2794017))
