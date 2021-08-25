@@ -35,7 +35,7 @@ style_duo_accent(
 
 class: title-slide, center, middle, inverse
 
-background-image: url(https://github.com/guadag12/rladies-socialnetwork-talk/raw/main/img/presentation.jpg)
+background-image: url(https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/presentation.jpg)
 background-position: contain
 
 ---
@@ -67,11 +67,13 @@ class:  inverse, middle, center
 
 ### Materiales para hoy
 
-* Template (link)
+* Slides ([link](https://guadag12.github.io/socialnetwork-rladies-talk/))
 
-* R Markdown (link)
+* Materiales ([link](https://github.com/guadag12/socialnetwork-rladies-talk/tree/main/codigo))
 
-* Template repo ([link](https://github.com/guadag12/rladies-socialnetwork-talk))
+* Slides repositorio ([link](https://github.com/guadag12/socialnetwork-rladies-talk))
+
+* Proyecto Rstudio Cloud ([link](https://rstudio.cloud/project/2794017))
 
 ---
 
@@ -171,7 +173,7 @@ paged_table(head(af_mm %>% arrange(desc(date)),4))
 
 ---
 
-<img src="https://github.com/guadag12/rladies-socialnetwork-talk/raw/main/img/paper-sinclair.png" width="150%" />
+<img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/paper-sinclair.png" width="150%" />
 
 ---
 class: center
@@ -222,7 +224,7 @@ library(visNetwork)
 
 .right-column[
 
-<img src="https://github.com/guadag12/rladies-socialnetwork-talk/raw/main/img/nodos_3.png" width="50%" />
+<img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/nodos_3.png" width="50%" />
 
 ]
 .left-column[
@@ -245,7 +247,7 @@ paged_table(as.data.frame(nodes[,c(1)]))
 
 .right-column[
 
-<img src="https://github.com/guadag12/rladies-socialnetwork-talk/raw/main/img/degree.png" width="50%" />
+<img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/degree.png" width="50%" />
 
 ]
 
@@ -285,14 +287,14 @@ class:  middle, center
 
 #### Undirected
 
-<img src="https://github.com/guadag12/rladies-socialnetwork-talk/raw/main/img/undirected_2.png" width="150%" />
+<img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/undirected_2.png" width="150%" />
 
 ]
 
 .pull-right[
 
 #### Directed
-<img src="https://github.com/guadag12/rladies-socialnetwork-talk/raw/main/img/aristas_directed.png" width="180%" />
+<img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/aristas_directed.png" width="180%" />
 
 ]
 
@@ -305,20 +307,22 @@ class: middle, center
 
 ### Customización I
 
-<img src="https://github.com/guadag12/rladies-socialnetwork-talk/raw/main/img/customizacion_1.png" width="110%" />
+<img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/customizacion_1.png" width="110%" />
 
 ---
 
 ### Customización II
 
-<img src="https://github.com/guadag12/rladies-socialnetwork-talk/raw/main/img/customizacion.png" width="60%" />
+<img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/customizacion.png" width="60%" />
 
 ---
 
 ## Degree (Grado de centralidad)
 
+#### La cantidad de edges / aristas / relaciones que tiene un nodo.
+
 .pull-left[
-<img src="https://github.com/guadag12/rladies-socialnetwork-talk/raw/main/img/degree.png" width="150%" />
+<img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/degree.png" width="150%" />
 
 ]
 .pull-right[
@@ -334,7 +338,7 @@ paged_table(data.frame(out = degree(g, mode = "out"), 'in' = degree(g, mode = "i
 ---
 
 ### Layouts
-<img src="https://github.com/guadag12/rladies-socialnetwork-talk/raw/main/img/layouts.png" width="105%" />
+<img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/layouts.png" width="105%" />
 
 ---
 
@@ -373,7 +377,7 @@ class:  middle, center
 ]
 .pull-right[
 
-<img src="https://github.com/guadag12/rladies-socialnetwork-talk/raw/main/img/calvo_aruguete.png" width="100%" />
+<img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/calvo_aruguete.png" width="100%" />
 
 ]
 ---

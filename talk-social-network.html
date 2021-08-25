@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>talk-social-network.knit</title>
+    <meta charset="utf-8" />
+    <script src="talk-social-network_files/header-attrs/header-attrs.js"></script>
+    <link href="talk-social-network_files/pagedtable/css/pagedtable.css" rel="stylesheet" />
+    <script src="talk-social-network_files/pagedtable/js/pagedtable.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+class: title-slide, center, middle, inverse
+
+background-image: url(https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/presentation.jpg)
+background-position: contain
+
+---
+class: middle, center
+
+.center[
+# Agradecimientos! &lt;img src="https://i.pinimg.com/originals/40/1d/89/401d898cafb6e901006ed883650cfecb.gif" width="5%" /&gt;]
+
+&lt;img src="https://pbs.twimg.com/profile_images/1173008374469996546/UWoNKw-8_400x400.jpg" width="25%" /&gt;
+
+[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> @RLadiesBA](https://twitter.com/RLadiesBA)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; [<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg> @rladies-ba](http://rladies-ba.slack.com) 
+
+---
+class:  inverse, middle, center
+
+## GUADA GONZALEZ
+
+&lt;img src="https://github.com/guadag12/talk-cienciassoccomputacionales/raw/main/img/img-guada.png" width="15%" /&gt;
+
+### Politóloga &amp; Data Scientist
+
+#### Coordinadora [GICP Observatorio de Redes](https://twitter.com/O_de_R)
+
+#### Investigadora [ILCSS](https://twitter.com/ilcss_umd)
+
+#### Profesora [Laboratorio de Políticas Públicas](https://twitter.com/LABPoliticasUBA)
+
+---
+
+### Materiales para hoy
+
+* Slides ([link](https://guadag12.github.io/socialnetwork-rladies-talk/))
+
+* Materiales ([link](https://github.com/guadag12/socialnetwork-rladies-talk/tree/main/codigo))
+
+* Slides repositorio ([link](https://github.com/guadag12/socialnetwork-rladies-talk))
+
+* Proyecto Rstudio Cloud ([link](https://rstudio.cloud/project/2794017))
+
+---
+
+### ¿Qué vamos a ver hoy?
+
+* politicxsentwitteR como una fuente de información
+&lt;/br&gt;
+
+* ¿Qué es y que no es social network?
+&lt;/br&gt;
+
+* Paquetes para hoy: [politicxsentwitteR](https://github.com/guadag12/politicxsentwitteR) e [igraph](https://cran.r-project.org/web/packages/igraph/igraph.pdf)
+&lt;/br&gt;
+
+* Nodos y Aristas
+&lt;/br&gt;
+
+* Grados de centralidad
+&lt;/br&gt;
+
+* Comunidades
+&lt;/br&gt;
+
+* Layouts
+&lt;/br&gt;
+
+* Redes Interactivas con VisNetwork
+&lt;/br&gt;
+
+---
+class:  middle, center
+
+### politicxsentwitteR 🐦📦
+
+&lt;img src="https://github.com/guadag12/politicxsentwitteR/raw/main/man/figures/logo.png" width="25%" /&gt;
+
+
+#### [Repositorio](https://github.com/guadag12/politicxsentwitteR)
+#### [Web con ejemplos en español](https://guadag12.github.io/politicxsentwitteR/index.html)
+---
+
+class: inverse, middle, center
+
+## ¿Pero dónde nace esto?
+
+---
+class: middle, center
+
+### App politicos en twitter
+
+&lt;img src="https://github.com/Observatorio-de-Redes/politicosentwitter/raw/main/ShinyApp/www/shiny%20contest/img%20def.png" width="60%" /&gt;
+
+
+##### [www.politicosentwitter.com](www.politicosentwitter.com)
+
+---
+
+class: inverse, middle, center
+
+## Algunas funciones del paquete para hoy
+
+---
+### Obtener data de tweets 🤳 👇
+
+
+
+```r
+library(politicxsentwitteR)
+
+af &lt;- get_timeline_data(screen.name = "alferdez")
+```
+
+
+```r
+paged_table(head(af,3))
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["user_id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["status_id"],"name":[2],"type":["chr"],"align":["left"]},{"label":["created_at"],"name":[3],"type":["chr"],"align":["left"]},{"label":["screen_name"],"name":[4],"type":["chr"],"align":["left"]},{"label":["text"],"name":[5],"type":["chr"],"align":["left"]},{"label":["source"],"name":[6],"type":["chr"],"align":["left"]},{"label":["is_quote"],"name":[7],"type":["chr"],"align":["left"]},{"label":["is_retweet"],"name":[8],"type":["chr"],"align":["left"]},{"label":["favorite_count"],"name":[9],"type":["chr"],"align":["left"]},{"label":["retweet_count"],"name":[10],"type":["chr"],"align":["left"]},{"label":["lang"],"name":[11],"type":["chr"],"align":["left"]},{"label":["status_url"],"name":[12],"type":["chr"],"align":["left"]},{"label":["name"],"name":[13],"type":["chr"],"align":["left"]},{"label":["mentions_user_id"],"name":[14],"type":["chr"],"align":["left"]},{"label":["mentions_screen_name"],"name":[15],"type":["chr"],"align":["left"]},{"label":["retweet_status_id"],"name":[16],"type":["chr"],"align":["left"]},{"label":["retweet_text"],"name":[17],"type":["chr"],"align":["left"]},{"label":["retweet_created_at"],"name":[18],"type":["chr"],"align":["left"]},{"label":["retweet_source"],"name":[19],"type":["chr"],"align":["left"]},{"label":["retweet_favorite_count"],"name":[20],"type":["chr"],"align":["left"]},{"label":["retweet_retweet_count"],"name":[21],"type":["chr"],"align":["left"]},{"label":["retweet_user_id"],"name":[22],"type":["chr"],"align":["left"]},{"label":["retweet_screen_name"],"name":[23],"type":["chr"],"align":["left"]},{"label":["retweet_name"],"name":[24],"type":["chr"],"align":["left"]},{"label":["retweet_followers_count"],"name":[25],"type":["chr"],"align":["left"]},{"label":["retweet_friends_count"],"name":[26],"type":["chr"],"align":["left"]},{"label":["retweet_statuses_count"],"name":[27],"type":["chr"],"align":["left"]},{"label":["retweet_location"],"name":[28],"type":["chr"],"align":["left"]},{"label":["retweet_description"],"name":[29],"type":["chr"],"align":["left"]},{"label":["retweet_verified"],"name":[30],"type":["chr"],"align":["left"]},{"label":["reply_to_status_id"],"name":[31],"type":["chr"],"align":["left"]},{"label":["reply_to_user_id"],"name":[32],"type":["chr"],"align":["left"]},{"label":["reply_to_screen_name"],"name":[33],"type":["chr"],"align":["left"]},{"label":["urls_url"],"name":[34],"type":["chr"],"align":["left"]},{"label":["urls_t_co"],"name":[35],"type":["chr"],"align":["left"]}],"data":[{"1":"149991703","2":"1132680469269635077","3":"2019-05-26 16:10:42","4":"alferdez","5":"Desatemos la esperanza. Vamos a volver para ser mejores. #EntreTodos https://t.co/Uoed2WF2jX","6":"Twitter for iPhone","7":"FALSE","8":"TRUE","9":"0","10":"3329","11":"es","12":"https://twitter.com/alferdez/status/1132680469269635077","13":"Alberto Fernández","14":"149991703","15":"alferdez","16":"1132416435626676224","17":"Desatemos la esperanza. Vamos a volver para ser mejores. #EntreTodos https://t.co/Uoed2WF2jX","18":"2019-05-25 22:41:32","19":"Twitter for iPhone","20":"14356","21":"3329","22":"149991703","23":"alferdez","24":"Alberto Fernández","25":"1982667","26":"7226","27":"27560","28":"Buenos Aires","29":"Abogado. Profesor de Derecho Penal (UBA). Hincha de Argentinos Juniors. Presidente de la Nación Argentina.","30":"TRUE","31":"NA","32":"NA","33":"NA","34":"NA","35":"NA","_rn_":"1"},{"1":"149991703","2":"1132680508675117056","3":"2019-05-26 16:10:52","4":"alferdez","5":"Para salir del laberinto al que vamos a entrar el diez de diciembre debemos trabajar todos, codo a codo, nadie sobra, todos hacen falta. https://t.co/Ddjx1gZJPw","6":"Twitter for iPhone","7":"FALSE","8":"TRUE","9":"0","10":"4091","11":"es","12":"https://twitter.com/alferdez/status/1132680508675117056","13":"Alberto Fernández","14":"149991703","15":"alferdez","16":"1132635401842253826","17":"Para salir del laberinto al que vamos a entrar el diez de diciembre debemos trabajar todos, codo a codo, nadie sobra, todos hacen falta. https://t.co/Ddjx1gZJPw","18":"2019-05-26 13:11:37","19":"Twitter for iPhone","20":"13800","21":"4091","22":"149991703","23":"alferdez","24":"Alberto Fernández","25":"1982667","26":"7226","27":"27560","28":"Buenos Aires","29":"Abogado. Profesor de Derecho Penal (UBA). Hincha de Argentinos Juniors. Presidente de la Nación Argentina.","30":"TRUE","31":"NA","32":"NA","33":"NA","34":"NA","35":"NA","_rn_":"2"},{"1":"149991703","2":"1137880822546124802","3":"2019-06-10 00:35:03","4":"alferdez","5":"Felicitaciones @bordet por tu merecidisimo triunfo. \\n\\nEl pueblo de Entre Ríos renovó su esperanza. Vamos Argentina.","6":"Twitter Web Client","7":"FALSE","8":"FALSE","9":"5996","10":"1371","11":"es","12":"https://twitter.com/alferdez/status/1137880822546124802","13":"Alberto Fernández","14":"134232117","15":"bordet","16":"NA","17":"NA","18":"NA","19":"NA","20":"NA","21":"NA","22":"NA","23":"NA","24":"NA","25":"NA","26":"NA","27":"NA","28":"NA","29":"NA","30":"NA","31":"NA","32":"NA","33":"NA","34":"NA","35":"NA","_rn_":"3"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+### Obtener data de cantidad de followers / friends 👥 
+
+
+```r
+library(politicxsentwitteR)
+library(tidyverse)
+
+af_mm &lt;- get_friends_followers(screen.name = c("alferdez", "mauriciomacri"))
+```
+
+
+```r
+paged_table(head(af_mm %&gt;% arrange(desc(date)),4))
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["screen_name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["date"],"name":[2],"type":["chr"],"align":["left"]},{"label":["followers_count"],"name":[3],"type":["chr"],"align":["left"]},{"label":["friends_count"],"name":[4],"type":["chr"],"align":["left"]},{"label":["listed_count"],"name":[5],"type":["chr"],"align":["left"]},{"label":["statuses_count"],"name":[6],"type":["chr"],"align":["left"]},{"label":["favourites_count"],"name":[7],"type":["chr"],"align":["left"]}],"data":[{"1":"alferdez","2":"2021-08-24","3":"2116848","4":"7200","5":"2055","6":"29130","7":"8083","_rn_":"1"},{"1":"mauriciomacri","2":"2021-08-24","3":"5116194","4":"635","5":"7366","6":"10319","7":"125","_rn_":"2"},{"1":"alferdez","2":"2021-08-23","3":"2116549","4":"7200","5":"2055","6":"29122","7":"8083","_rn_":"3"},{"1":"mauriciomacri","2":"2021-08-23","3":"5116101","4":"635","5":"7365","6":"10319","7":"125","_rn_":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+&lt;img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/paper-sinclair.png" width="150%" /&gt;
+
+---
+class: center
+### ¿Qué entendemos por social network?
+
+.pull-left[
+
+__Is a social structure made up of a set of social actors (such as individuals or organizations) and of a complex set of the dyadicties between these actors (Wasserman and Faust 1994)__
+]
+
+.pull-right[
+![](https://kateto.net/wp-content/uploads/2015/04/Facebook-friends-net-GEPHI-Images.png) 
+]
+---
+class:  middle, center
+
+&lt;/br&gt;
+&lt;/br&gt;
+&lt;/br&gt;
+
+![](https://www.universiteitleiden.nl/binaries/content/gallery/ul2/main-images/social-and-behavioural-sciences/cwts/mettekstklein.png/mettekstklein.png/d880x320)
+&lt;/br&gt;
+&lt;/br&gt;
+&lt;/br&gt;
+&lt;/br&gt;
+
+
+.right[
+[https://igraph.org/](https://igraph.org/)
+]
+---
+### Packages
+
+&lt;/br&gt;
+
+```r
+#library(devtools)
+#install_github("guadag12/politicxsentwitteR")
+library(politicxsentwitteR)
+library(dplyr)
+library(igraph)
+library(visNetwork)
+```
+
+---
+
+## Nodos / Vertices
+
+.right-column[
+
+&lt;img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/nodos_3.png" width="50%" /&gt;
+
+]
+.left-column[
+
+&lt;/br&gt;
+&lt;/br&gt;
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["nodes[, c(1)]"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"A"},{"1":"B"},{"1":"C"},{"1":"D"},{"1":"E"},{"1":"F"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+]
+---
+## Aristas / Edges
+
+.right-column[
+
+&lt;img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/degree.png" width="50%" /&gt;
+
+]
+
+.left-column[
+&lt;/br&gt;
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["from"],"name":[1],"type":["chr"],"align":["left"]},{"label":["to"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"A","2":"B"},{"1":"B","2":"C"},{"1":"B","2":"D"},{"1":"C","2":"D"},{"1":"D","2":"F"},{"1":"D","2":"A"},{"1":"E","2":"E"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+]
+
+
+---
+### Particularidades de igraph
+
+&lt;/br&gt;
+&lt;/br&gt;
+
+1️⃣
+
+```r
+eigen_centrality(g)$vertices
+```
+&lt;/br&gt;
+&lt;/br&gt;
+&lt;/br&gt;
+
+2️⃣
+
+```r
+is.directed(g)
+```
+
+```
+## [1] TRUE
+```
+
+---
+class:  middle, center
+
+### Direccionalidad
+
+.pull-left[
+
+#### Undirected
+
+&lt;img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/undirected_2.png" width="150%" /&gt;
+
+]
+
+.pull-right[
+
+#### Directed
+&lt;img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/aristas_directed.png" width="180%" /&gt;
+
+]
+
+---
+class: middle, center
+
+![](https://i.pinimg.com/originals/5d/ce/36/5dce367792c040a59ec39a459aed1c92.gif)
+
+---
+
+### Customización I
+
+&lt;img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/customizacion_1.png" width="110%" /&gt;
+
+---
+
+### Customización II
+
+&lt;img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/customizacion.png" width="60%" /&gt;
+
+---
+
+## Degree (Grado de centralidad)
+
+#### La cantidad de edges / aristas / relaciones que tiene un nodo.
+
+.pull-left[
+&lt;img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/degree.png" width="150%" /&gt;
+
+]
+.pull-right[
+&lt;/br&gt;
+&lt;/br&gt;
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["out"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["in."],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"1","_rn_":"A"},{"1":"2","2":"1","_rn_":"B"},{"1":"1","2":"1","_rn_":"C"},{"1":"2","2":"2","_rn_":"D"},{"1":"1","2":"1","_rn_":"E"},{"1":"0","2":"1","_rn_":"F"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+]
+
+---
+
+### Layouts
+&lt;img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/layouts.png" width="105%" /&gt;
+
+---
+
+### Comunidades
+&lt;/br&gt;
+
+.pull-left[
+&lt;/br&gt;
+##### Parte / Porción que está más conectada internamente que externamente
+
+]
+.pull-right[
+![](https://griffsgraphs.files.wordpress.com/2012/07/facebook-network.png)
+]
+
+---
+
+class: inverse, center, middle
+
+## Agreguemos interactividad
+![](https://github.com/guadag12/talk-cienciassoccomputacionales/raw/main/img/gif_def.gif) 
+
+---
+class:  middle, center
+
+### Bibliografía complementaria
+.pull-left[
+* [Pablo Barberá](http://pablobarbera.com/)
+* [Kateto.net](https://kateto.net/netscix2016.html)
+* [Interactive Network Visualization](https://www.statworx.com/ch/blog/interactive-network-visualization-with-r/)
+* [Network Science Book](http://networksciencebook.com/)
+* [Data Storm](http://datastorm-open.github.io/visNetwork/legend.html)
+* Sinclair, B. (2016). Network Structure and Social Outcomes: Network Analysis for Social Science. In R. Alvarez (Ed.) Computational Social Science: Discovery and Prediction (Analytical Methods for Social Research, pp. 121-139). Ed: Cambridge University Press.
+* Luke, D. (2015) A User’s Guide to Network Analysis in R. Ed: Springer.
+
+]
+.pull-right[
+
+&lt;img src="https://github.com/guadag12/socialnetwork-rladies-talk/raw/main/img/calvo_aruguete.png" width="100%" /&gt;
+
+]
+---
+
+class: inverse, middle, center
+
+# GRACIAS!🥰 🙌
+&lt;/br&gt;
+## ESTEMOS EN CONTACTO! 🙌 👇
+
+[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> @guadag12](https://twitter.com/guadag12)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; [<svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> @guadag12](http://github.com/guadag12) &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; [<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg> guadagonz12@gmail.com](guadagonz12@gmail.com)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
