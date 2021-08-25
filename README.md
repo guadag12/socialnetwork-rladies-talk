@@ -1,5 +1,5 @@
 # Introducción a Social Network con politicxsentwitter 🐦
-Charla realizada en RLadies BA sobre Introducción a Social Network en R! 
+Charla realizada en RLadies BA sobre Introducción a Social Network Analysis en R! 
 
 ### Materiales 🤓👇
 
