@@ -1,7 +1,7 @@
 # Introducción a Social Network con politicxsentwitter 🐦
 Charla realizada en RLadies BA sobre Introducción a Social Network Analysis en R! 
 
-#### [Video de Youtube ▶️](youtu.be/BSU82auREmw)
+#### [Video de Youtube ▶️](https://www.youtube.com/watch?v=BSU82auREmw&ab_channel=RLadiesBuenosAires)
 
 ### Materiales 🤓👇
 
